@@ -50,4 +50,3 @@ export function computeSobelGradients(input: Buffer, width: number, height: numb
 
   return { magnitude, direction };
 }
-
