@@ -23,10 +23,10 @@ export class BasicProcessingService {
   async resizeImage(data: { imagePath: string; width: number; height: number }) {
     const result = await this.resizeService.resize(data);
     if (result.success) {
-      return { success: true, message: 'Image resized successfully', data: result.savedImagePath };
+      return { status: 200, message: 'Image resized successfully', data: result.savedImagePath };
     }
     else {
-      return { success: false, message: 'Failed to resize image', error: result.error };
+      return { status: 500, message: 'Failed to resize image', error: result.error };
     }
   }
 
